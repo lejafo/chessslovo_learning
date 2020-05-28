@@ -288,4 +288,7 @@ TSWLatexianTemp*
 *.xdy
 *.tdo
 *.hd
-*.pdf
+# *.pdf
+
+#other
+.DS_Store
