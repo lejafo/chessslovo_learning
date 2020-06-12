@@ -1,0 +1,282 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{caption}
+
+\usepackage{skak}
+\usepackage{xskak}
+\usepackage{chessboard}
+
+\captionsetup[figure]{labelfont={bf,bf},textfont={bf,bf}}
+
+% \captionsetup{
+%   format=plain,
+%   justification=raggedright,
+%   singlelinecheck=false,
+%   font=small,
+%   font={bf,bf} % This covers labelfont and textfont
+%   labelsep=pipe,
+%   figurename=Figure
+% }
+
+\addto\captionsenglish{%
+    \renewcommand{\figurename}{}}
+
+\setlength{\abovecaptionskip}{-10pt plus 3pt minus 2pt}
+% \setlength{\belowcaptionskip}{-15pt plus 3pt minus 2pt}
+
+% \let\savedchessboard\chessboard
+% \renewcommand{\chessboard}{%
+%     \begin{figure}[h]%
+%         \centering
+%         \caption{}
+%         \savedchessboard
+%     \end{figure}
+% }
+
+\begin{document}
+
+\def\whitepieces{Be2, Kb7, Nc6, Pd2}
+\def\blackpieces{kc5, bd5, bd6, re8, pb3, pf6}
+\def\fields{}
+\def\areas{}
+\setchessboard{
+    inverse=false,
+    normalboard,
+    color=magenta,
+    clearboard,
+    showmover=false}
+
+\begin{figure}[h]
+    \centering
+    \caption{}
+    \chessboard[
+        setpieces=\whitepieces,
+        addpieces=\blackpieces,
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.2ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields=\fields,
+        markareas=\areas
+    ]
+\end{figure}
+
+
+% \def\whitepieces{Ra1, Nb1, Bc1, Qd1, Ke1, Nf1, Bg1, Rh1,
+%                     Pa2, Pb2, Pc2, Pd2, Pe2, Pf2, Pg2, Ph2}
+% \def\blackpieces{ra8, nb8, bc8, qd8, ke8, nf8, bg8, rh8,
+%                     pa7, pb7, pc7, pd7, pe7, pf7, pg7, ph7}
+
+\def\whitepieces{Ra1, Ne4, Bc1, Qe2, Ke1, Bf1, Ng1, Rh1,
+    Pa2, Pb2, Pc2, Pd4, Pf2, Pg2, Ph2}
+\def\blackpieces{ra8, nd7, bc8, qd8, ke8, bf8, nf6, rh8,
+    pa7, pb7, pc6, pe7, pf7, pg7, ph7}
+\def\fields{}
+\def\areas{}
+\setchessboard{
+    inverse=false,
+    normalboard,
+    color=magenta,
+    clearboard,
+    showmover=false}
+
+\begin{figure}[h]
+    \centering
+    \caption{}
+    \chessboard[
+        setpieces=\whitepieces,
+        addpieces=\blackpieces,
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields=\fields,
+        markareas=\areas
+    ]
+\end{figure}
+
+\newpage
+
+\def\whitepieces{Ra1, Ne5, Bc1, Kg1, Bf7, Rf1,
+    Pa2, Pb2, Pc2, Pc3, Pf2, Pg2, Ph2}
+\def\blackpieces{ra8, nb8, bd1, qd8, ke7, bf8, rh8,
+    pa7, pb7, pc7, pd6, pg7, ph7}
+\def\fields{}
+\def\areas{}
+\setchessboard{
+    inverse=false,
+    normalboard,
+    color=magenta,
+    clearboard,
+    showmover=false}
+
+\begin{figure}[h]
+    \centering
+    \caption{}
+    \chessboard[
+        setpieces=\whitepieces,
+        addpieces=\blackpieces,
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields=\fields,
+        markareas=\areas
+    ]
+\end{figure}
+
+\def\whitepieces{Kg1, Rg4, Bg7, Pf2, Pg2}
+\def\blackpieces{kg8, qb4, ra8, rf8, pa5, pf7, ph7}
+\def\fields{}
+\def\areas{}
+\setchessboard{
+    inverse=false,
+    normalboard,
+    color=magenta,
+    clearboard,
+    showmover=false}
+
+\begin{figure}[h]
+    \centering
+    \caption{}
+    \chessboard[
+        setpieces=\whitepieces,
+        addpieces=\blackpieces,
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.2ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields=\fields,
+        markareas=\areas
+    ]
+\end{figure}
+
+\newpage
+
+\def\whitepieces{Kb2, Qh8}
+\def\blackpieces{kd3, qe4, pe2}
+\def\fields{}
+\def\areas{}
+\setchessboard{
+    inverse=false,
+    normalboard,
+    color=magenta,
+    clearboard,
+    showmover=false}
+
+\begin{figure}[h]
+    \centering
+    \caption{}
+    \chessboard[
+        setpieces=\whitepieces,
+        addpieces=\blackpieces,
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.2ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields=\fields,
+        markareas=\areas
+    ]
+\end{figure}
+
+\def\whitepieces{Ra1, Nb1, Bc1, Qd1, Kg1, Be2, Re1,
+    Pa2, Pb2, Pc2, Pf2, Pg2, Ph2}
+\def\blackpieces{ra8, bb7, qd8, ke8, bf8, nf6, rh8,
+    pa6, pc7, pd5, pf7, pg7, ph7, pf3}
+\def\fields{}
+\def\areas{}
+\setchessboard{
+    inverse=false,
+    normalboard,
+    color=magenta,
+    clearboard,
+    showmover=false}
+
+\begin{figure}[h]
+    \centering
+    \caption{}
+    \chessboard[
+        setpieces=\whitepieces,
+        addpieces=\blackpieces,
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields=\fields,
+        markareas=\areas
+    ]
+\end{figure}
+
+\newpage
+
+\def\whitepieces{Rf7, Bd1, Kh1, Rh8,
+    Pd5, Pg2, Ph2}
+\def\blackpieces{rc1, bb4, qd7, kg5, rc3,
+    pa6, pb7, pd6, pe7, pg6}
+\def\fields{}
+\def\areas{}
+\setchessboard{
+    inverse=false,
+    normalboard,
+    color=magenta,
+    clearboard,
+    showmover=false}
+
+\begin{figure}[h]
+    \centering
+    \caption{}
+    \chessboard[
+        setpieces=\whitepieces,
+        addpieces=\blackpieces,
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields=\fields,
+        markareas=\areas
+    ]
+\end{figure}
+
+\newpage
+
+\def\whitepieces{Ng5, Kb1, Qe8,
+    Pa3, Pb2, Pf4, Pg3}
+\def\blackpieces{bf8, qc5, kh8,
+    pa7, pb5, pc7, pf5, pg7}
+\def\fields{}
+\def\areas{}
+\setchessboard{
+    inverse=false,
+    normalboard,
+    color=magenta,
+    clearboard,
+    showmover=false}
+
+\begin{figure}[h]
+    \centering
+    \caption{}
+    \chessboard[
+        setpieces=\whitepieces,
+        addpieces=\blackpieces,
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields=\fields,
+        markareas=\areas
+    ]
+\end{figure}
+
+\def\whitepieces{Nd4, Rc6, Kh4,
+    Pa2, Pb3, Pe3}
+\def\blackpieces{ng4, rb4, kg7,
+    pa5, pe7, pf7, ph7}
+\def\fields{}
+\def\areas{}
+\setchessboard{
+    inverse=false,
+    normalboard,
+    color=magenta,
+    clearboard,
+    showmover=false}
+
+\begin{figure}[h]
+    \centering
+    \caption{}
+    \chessboard[
+        setpieces=\whitepieces,
+        addpieces=\blackpieces,
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields=\fields,
+        markareas=\areas
+    ]
+\end{figure}
+
+\end{document}
