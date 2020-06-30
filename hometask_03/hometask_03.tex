@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
+\usepackage[russian]{babel}
 
 \usepackage{caption}
 
@@ -35,258 +35,342 @@
 %     \end{figure}
 % }
 
+\newenvironment{nscenter}
+ {\parskip=0pt\par\nopagebreak\centering}
+ {\par\noindent\ignorespacesafterend}
+
+\newcounter{taskno}
+\stepcounter{taskno}
+\newcounter{subtaskno}[taskno]
+
+\newcommand{\task}[0]{\par\noindent\textbf{Задача\,\arabic{taskno}.} \stepcounter{taskno} \stepcounter{subtaskno}}
+\newcommand{\taskk}[0]{\par\noindent\textbf{Задача\,\arabic{taskno}*.} \stepcounter{taskno} \stepcounter{subtaskno}}
+
+
 \begin{document}
 
+% \setchessboard{
+%     inverse=false,
+%     normalboard,
+%     color=magenta,
+%     clearboard,
+%     showmover=true}
 
-\begin{figure}[h]
-    \centering
-    \caption{}
-    \vspace{0.3em}
+\task Какое минимальное количество ходов необходимо для белых, чтобы поставить мат?
+
+\begin{nscenter}
     \chessboard[
-        showmover=false,
-        borderleft=false,
-        bordertop=true,
-        borderbottom=false,
-        labeltoplift=0.4em,
-        labeltop=true,
-        labelbottom=false,
-        labelleft=false,
-        labelright=true,
-        printarea=e5-h8,
-        %markfields=\fields,
-        %markareas=\areas,
-        setpieces={Ke7, Be5, Rf6, Ph5},
-        addpieces={kg7, nf7, nf8, rg5, pg6, ph7}
-        % pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
-        % text= \fontsize{1.2ex}{1.2ex}\bfseries \sffamily\currentwq
-    ]
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \caption{}
-    \vspace{0.3em}
-    \chessboard[
-        showmover=false,
-        borderleft=false,
-        bordertop=true,
-        borderbottom=false,
-        labeltoplift=0.4em,
-        labeltop=true,
-        labelbottom=false,
-        labelleft=false,
-        labelright=true,
-        printarea=d5-h8,
-        %markfields=\fields,
-        %markareas=\areas,
-        setpieces={Kg6, Qf6},
-        addpieces={kg8}
-    ]
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \caption{}
-    \vspace{0.3em}
-    \chessboard[
-        showmover=false,
-        borderleft=false,
-        bordertop=true,
-        borderbottom=false,
-        labeltoplift=0.4em,
-        labeltop=true,
-        labelbottom=false,
-        labelleft=false,
-        labelright=true,
-        printarea=e4-h8,
-        %markfields=\fields,
-        %markareas=\areas,
-        setpieces={Kh6, Pg6, Ne7},
-        addpieces={kh8, bg8, ne8}
-    ]
-\end{figure}
-
-
-\begin{figure}[h]
-    \centering
-    \caption{}
-    \vspace{0.3em}
-    \chessboard[
-        showmover=false,
-        borderleft=false,
-        bordertop=true,
-        borderbottom=false,
-        labeltoplift=0.4em,
-        labeltop=true,
-        labelbottom=false,
-        labelleft=false,
-        labelright=true,
-        printarea=e4-h8,
-        %markfields=\fields,
-        %markareas=\areas,
-        setpieces={Kg6, Rh7},
-        addpieces={kg8}
-    ]
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \caption{}
-    \vspace{0.3em}
-    \chessboard[
-        showmover=false,
-        borderleft=false,
-        bordertop=true,
-        borderbottom=false,
-        labeltoplift=0.4em,
-        labeltop=true,
-        labelbottom=false,
-        labelleft=false,
-        labelright=true,
-        printarea=e4-h8,
-        %markfields=\fields,
-        %markareas=\areas,
-        setpieces={Ke8, Qe7},
-        addpieces={kh8}
-    ]
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \caption{}
-    \vspace{0.3em}
-    \chessboard[
-        showmover=false,
-        borderleft=false,
-        bordertop=true,
-        borderbottom=false,
-        labeltoplift=0.4em,
-        labeltop=true,
-        labelbottom=false,
-        labelleft=false,
-        labelright=true,
-        printarea=d4-h8,
-        %markfields=\fields,
-        %markareas=\areas,
-        setpieces={Kh4, Bd4, Ne5},
-        addpieces={kh8, rf8, ph7}
-    ]
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \caption{}
-    \vspace{0.3em}
-    \chessboard[
-        showmover=false,
-        borderleft=false,
-        bordertop=true,
-        borderbottom=false,
-        labeltoplift=0.4em,
-        labeltop=true,
-        labelbottom=false,
-        labelleft=false,
-        labelright=true,
-        printarea=d4-h8,
-        %markfields=\fields,
-        %markareas=\areas,
-        setpieces={Kf4, Qh4, Ng5},
-        addpieces={kh8, qg6, re8, ng8, pg7, ph7}
-    ]
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \caption{}
-    \vspace{0.3em}
-    \chessboard[
-        showmover=false,
-        borderleft=false,
-        bordertop=true,
-        borderbottom=false,
-        labeltoplift=0.4em,
-        labeltop=true,
-        labelbottom=false,
-        labelleft=false,
-        labelright=true,
-        printarea=d4-h8,
-        %markfields=\fields,
-        %markareas=\areas,
-        setpieces={Kh4, Qh5, Bh7},
-        addpieces={kh8, qe8, rf8, rf6}
-    ]
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \caption{}
-    \vspace{0.3em}
-    \chessboard[
-        showmover=false,
-        borderleft=false,
-        bordertop=true,
-        borderbottom=false,
-        labeltoplift=0.4em,
-        labeltop=true,
-        labelbottom=false,
-        labelleft=false,
-        labelright=true,
-        printarea=d4-h8,
-        %markfields=\fields,
-        %markareas=\areas,
-        setpieces={Kf8, Rh4, Pg6},
-        addpieces={kh8, bg8, pg7, ph7}
-    ]
-\end{figure}
-
-
-
-\begin{figure}[h]
-    \centering
-    \caption{}
-    \vspace{0.3em}
-    \chessboard[
-        showmover=false,
-        borderleft=false,
-        bordertop=true,
-        borderbottom=false,
-        labeltoplift=0.4em,
-        labeltop=true,
-        labelbottom=false,
-        labelleft=false,
-        labelright=true,
-        printarea=d4-h8,
-        %markfields=\fields,
-        %markareas=\areas,
-        setpieces={Ke8, Bd4, Nh6, Pf5},
-        addpieces={kh8, pg7, ph7}
-    ]
-\end{figure}
-
-\def\whitepieces{Nd4, Rc6, Kh4,
-    Pa2, Pb3, Pe3}
-\def\blackpieces{ng4, rb4, kg7,
-    pa5, pe7, pf7, ph7}
-\def\fields{}
-\def\areas{}
-\setchessboard{
-    inverse=false,
-    normalboard,
-    color=magenta,
-    clearboard,
-    showmover=false}
-
-\begin{figure}[h]
-    \centering
-    \caption{}
-    \chessboard[
-        setpieces=\whitepieces,
-        addpieces=\blackpieces,
+        showmover=true,
+        setpieces = {Kg1, Ba1, Nf6, Ph6},
+        addpieces={kh8, bb7, pg3},
         pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
         text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
-        markfields=\fields,
-        markareas=\areas
+        markfields={},
+        markareas={}
     ]
-\end{figure}
+\end{nscenter}
+
+\taskk Подумайте, могут ли черные из предыдущей задачи каким-то образом отсрочить мат?
+
+\taskk Если справились с предыдущей задачей, подумайте еще вот над чем:
+могут ли белые из предыдущей задачи, несмотря на оттягивание мата со стороны черных,
+все же немного его ускорить?
+
+\taskk Ситуация кажется для белых безысходной:
+у черных преимущество в ладью и пешки вот-вот пройдут в ферзи.
+Могут ли белые как-то спасти свое положение?
+
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        setpieces = {Kd6, Qb6, Bc7, Pb4, Pc5},
+        addpieces={ka8, qb1, rc8, bb5, pa6, pc6, pd3, pe2},
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields={},
+        markareas={}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\newpage
+
+\taskk Найдите мат в два хода за белых.
+
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        setpieces = {Kg7, Qf7, Rb5, Re1},
+        addpieces={ka8, rf5, bg6, nd6, pb7, pd5, pf4, pf6},
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields={},
+        markareas={}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\task Каким образом белым выиграть?
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        borderleft=true,
+        bordertop=false,
+        borderbottom=true,
+        labeltoplift=0.4em,
+        labeltop=false,
+        labelbottom=true,
+        labelleft=true,
+        labelright=false,
+        printarea=a1-h5,
+        %markfields=\fields,
+        %markareas=\areas,
+        setpieces={Kg5, Qg1},
+        addpieces={ke2, pd2}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\task Могут ли белые выиграть?
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        borderleft=true,
+        bordertop=true,
+        borderbottom=true,
+        labeltoplift=0.4em,
+        labeltop=false,
+        labelbottom=true,
+        labelleft=true,
+        labelright=false,
+        % printarea=a1-h5,
+        %markfields=\fields,
+        %markareas=\areas,
+        setpieces={Ke7, Qh4},
+        addpieces={kg2, ph2}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\task Могут ли белые выиграть?
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        borderleft=true,
+        bordertop=true,
+        borderbottom=true,
+        labeltoplift=0.4em,
+        labeltop=false,
+        labelbottom=true,
+        labelleft=true,
+        labelright=false,
+        % printarea=a1-h5,
+        %markfields=\fields,
+        %markareas=\areas,
+        setpieces={Ke7, Qh4},
+        addpieces={kg2, pf2}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+
+\task Могут ли черные выиграть?
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        mover=b,
+        borderleft=true,
+        bordertop=true,
+        borderbottom=true,
+        labeltoplift=0.4em,
+        labeltop=false,
+        labelbottom=true,
+        labelleft=true,
+        labelright=false,
+        % printarea=a1-h5,
+        %markfields=\fields,
+        %markareas=\areas,
+        setpieces={Ke3, Bc3},
+        addpieces={ke5, rd4, rd8}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\task Могут ли белые выиграть, если их ход? А если ход черных?
+\begin{nscenter}
+    \chessboard[
+        showmover=false,
+        % mover=b,
+        borderleft=true,
+        bordertop=true,
+        borderbottom=true,
+        labeltoplift=0.4em,
+        labeltop=false,
+        labelbottom=true,
+        labelleft=true,
+        labelright=false,
+        % printarea=a1-h5,
+        %markfields=\fields,
+        %markareas=\areas,
+        setpieces={Kf3, Qe1},
+        addpieces={kh2, rg2}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\task Могут ли белые выиграть, если их ход? А если ход черных?
+\begin{nscenter}
+    \chessboard[
+        showmover=false,
+        % mover=b,
+        borderleft=true,
+        bordertop=true,
+        borderbottom=true,
+        labeltoplift=0.4em,
+        labeltop=false,
+        labelbottom=true,
+        labelleft=true,
+        labelright=false,
+        % printarea=a1-h5,
+        %markfields=\fields,
+        %markareas=\areas,
+        setpieces={Kh1, Qe6},
+        addpieces={kf8, rg7}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\task Могут ли белые выиграть, если их ход? А если ход черных?
+\begin{nscenter}
+    \chessboard[
+        showmover=false,
+        % mover=b,
+        borderleft=true,
+        bordertop=true,
+        borderbottom=true,
+        labeltoplift=0.4em,
+        labeltop=false,
+        labelbottom=true,
+        labelleft=true,
+        labelright=false,
+        % printarea=a1-h5,
+        %markfields=\fields,
+        %markareas=\areas,
+        setpieces={Ke2, Pf7},
+        addpieces={kh4, rg1}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+
+\task Могут ли белые выиграть?
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        % mover=b,
+        borderleft=true,
+        bordertop=true,
+        borderbottom=true,
+        labeltoplift=0.4em,
+        labeltop=false,
+        labelbottom=true,
+        labelleft=true,
+        labelright=false,
+        % printarea=a1-h5,
+        %markfields=\fields,
+        %markareas=\areas,
+        setpieces={Kh5, Re6, Pf5, Pg6},
+        addpieces={kf1, rf8, bf6}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\task Найти выигрышный ход за белых.
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        % mover=b,
+        borderleft=true,
+        bordertop=true,
+        borderbottom=true,
+        labeltoplift=0.4em,
+        labeltop=false,
+        labelbottom=true,
+        labelleft=true,
+        labelright=false,
+        % printarea=a1-h5,
+        %markfields=\fields,
+        %markareas=\areas,
+        setpieces={Kg1, Qd1, Re1, Ba5, Bh3, Nc3, Nc4, Pb3, Pc2, Pe4, Pf2, Pg3, Ph2},
+        addpieces={ke8, qc6, rh8, bb7, bf8, nc5, nf6, pa6, pd6, pe5, pf7, pg6, ph7}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\task Каким образом белым поймать черного коня?
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        % mover=b,
+        borderleft=true,
+        bordertop=true,
+        borderbottom=true,
+        labeltoplift=0.4em,
+        labeltop=false,
+        labelbottom=true,
+        labelleft=true,
+        labelright=false,
+        % printarea=a1-h5,
+        %markfields=\fields,
+        %markareas=\areas,
+        setpieces={Kf4, Bb3, Pa3, Pb2, Pc2, Pd3, Ph3},
+        addpieces={ke7, nh2, pa7, pb5, pf5, pg6, ph7}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\task Найдите мат в 3 хода за белых.
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        % mover=b,
+        borderleft=true,
+        bordertop=true,
+        borderbottom=true,
+        labeltoplift=0.4em,
+        labeltop=false,
+        labelbottom=true,
+        labelleft=true,
+        labelright=false,
+        % printarea=a1-h5,
+        %markfields=\fields,
+        %markareas=\areas,
+        setpieces={Kg1, Qh6, Rf1, Rf3, Pe4, Pd4, Pg2},
+        addpieces={kg8, qe8, rd8, rh8, bg4, pd6, pg6}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\task Найдите выигрыш за белых.
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        % mover=b,
+        borderleft=true,
+        bordertop=true,
+        borderbottom=true,
+        labeltoplift=0.4em,
+        labeltop=false,
+        labelbottom=true,
+        labelleft=true,
+        labelright=false,
+        % printarea=a1-h5,
+        %markfields=\fields,
+        %markareas=\areas,
+        setpieces={Kh7, Bh4, Pg6},
+        addpieces={ke4, bf8}
+    ]
+\end{nscenter}
+\vspace{4pt}
 
 \end{document}
