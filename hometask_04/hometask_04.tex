@@ -1,0 +1,195 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\usepackage{caption}
+
+\usepackage{skak}
+\usepackage{xskak}
+\usepackage{chessboard}
+
+\captionsetup[figure]{labelfont={bf,bf},textfont={bf,bf}}
+
+\addto\captionsenglish{%
+    \renewcommand{\figurename}{}}
+
+\setlength{\abovecaptionskip}{-10pt plus 3pt minus 2pt}
+
+\newenvironment{nscenter}
+ {\parskip=0pt\par\nopagebreak\centering}
+ {\par\noindent\ignorespacesafterend}
+
+\newcounter{taskno}
+\stepcounter{taskno}
+\newcounter{subtaskno}[taskno]
+
+\newcommand{\task}[0]{\par\noindent\textbf{Задача\,\arabic{taskno}.} \stepcounter{taskno} \stepcounter{subtaskno}}
+\newcommand{\taskk}[0]{\par\noindent\textbf{Задача\,\arabic{taskno}*.} \stepcounter{taskno} \stepcounter{subtaskno}}
+
+
+\begin{document}
+
+\task Оцените позицию и найдите ход (один или несколько) черных при котором: а) происходит пат б) черные выигрывают.
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        mover=b,
+        setpieces = {Ka8},
+        addpieces={kc6, re7},
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields={},
+        markareas={}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\task Оцените позицию и найдите ход (один или несколько) черных,
+при котором: а) происходит пат б) черные выигрывают.
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        mover=b,
+        setpieces = {Ka8},
+        addpieces={kg2, rb3, re3},
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields={},
+        markareas={}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\newpage
+
+\task Оцените позицию и подумайте, могут ли черные помешать
+белым выиграть если а) ход белых и б) ход черных?
+\begin{nscenter}
+    \chessboard[
+        showmover=false,
+        mover=b,
+        setpieces = {Kc6, Pd6},
+        addpieces={kc8},
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields={},
+        markareas={}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\task Оцените позицию и подумайте, могут ли белые выиграть, если
+а) ход белых и б) ход черных?
+\begin{nscenter}
+    \chessboard[
+        showmover=false,
+        mover=b,
+        setpieces = {Kc5, Pc6},
+        addpieces={kc7},
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields={},
+        markareas={}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\newpage
+
+\task Оцените позицию и подумайте, могут ли белые выиграть, если
+их ход? И если могут, то как им нужно действовать?
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        mover=w,
+        setpieces = {Kf6, Pg5},
+        addpieces={kh7},
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields={},
+        markareas={}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\task Немного изменим позицию из предыдущей задачи. Как нужно действовать белым, чтобы выиграть?
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        mover=w,
+        setpieces = {Kf7, Pg5},
+        addpieces={kh8},
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields={},
+        markareas={}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\newpage
+
+\task Оцените позицию и подумайте, каким образом белым добиться победы, если их ход?
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        mover=w,
+        setpieces = {Kb6, Pc6},
+        addpieces={kc8},
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields={},
+        markareas={}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\task Оцените позицию и подумайте, каким образом белым добиться победы, если их ход?
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        mover=w,
+        setpieces = {Ke4, Pb6},
+        addpieces={kd8},
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields={},
+        markareas={}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\newpage
+
+
+\taskk Попробуйте оценить позицию и найти за белых выигрышную стратегию.
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        mover=w,
+        setpieces = {Kd5, Rh6, Pe4, Pf4},
+        addpieces={kd7, bc5, pd6, pe5, pf4},
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields={},
+        markareas={}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\taskk Попробуйте оценить позицию и найти за белых выигрышную стратегию.
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        mover=w,
+        setpieces = {Kf5, Bc5, Pg2},
+        addpieces={kh4, bg8, pf7},
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields={},
+        markareas={}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\end{document}
