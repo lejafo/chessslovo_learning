@@ -1,0 +1,184 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+\usepackage{caption}
+
+\usepackage{skak}
+\usepackage{xskak}
+\usepackage{chessboard}
+
+\captionsetup[figure]{labelfont={small,it},textfont={small,it}}
+
+\addto\captionsenglish{%
+    \renewcommand{\figurename}{}}
+
+\setlength{\abovecaptionskip}{-10pt plus 3pt minus 2pt}
+
+\newenvironment{nscenter}
+ {\parskip=0pt\par\nopagebreak\centering}
+ {\par\noindent\ignorespacesafterend}
+
+\newcounter{taskno}
+\stepcounter{taskno}
+\newcounter{subtaskno}[taskno]
+
+\newcommand{\task}[0]{\par\noindent\textbf{Задача\,\arabic{taskno}.} \stepcounter{taskno} \stepcounter{subtaskno}}
+\newcommand{\taskk}[0]{\par\noindent\textbf{Задача\,\arabic{taskno}*.} \stepcounter{taskno} \stepcounter{subtaskno}}
+
+\begin{document}
+
+\task Найдите мат в два хода за белых.
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        mover=w,
+        setpieces = {Kg1, Qd5, Ra1, Rf1, Bb3, Be3, Ng5, Pa2, Pb2, Pc3, Pf2, Pg2, Ph2},
+        addpieces={kh8, qd8, ra8, rf8, be7, bf5, nc6, ne4, pa6, pb5, pc7, pg7, ph7},
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields={},
+        markareas={}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\task Найдите выигрыш за черных.
+\begin{nscenter}
+    \begin{figure}[h]
+        \centering
+        \caption*{из партии Флор — Толлуш\\Таллин, 1945 г.}
+        \chessboard[
+            showmover=true,
+            mover=b,
+            setpieces = {Kg2, Rc1, Re4, Pb3, Pf2, Pf3, Ph2},
+            addpieces={kf8, rd6, bg7, pa2, pc3, pf7, pg6, ph7},
+            pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+            text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+            markfields={},
+            markareas={}
+        ]
+    \end{figure}
+\end{nscenter}
+\vspace{4pt}
+
+\task Найдите ничью за белых.
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        mover=w,
+        setpieces = {Kd2, Bd1, Bd8, Pa2, Pb2, Pc3, Pd4, Pe5, Pf4, Pg4, Ph3},
+        addpieces={kb5, ra6, rb7, ba5, pa3, pb4, pc5, pd6, pe7, pf6, pg5, ph4},
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields={},
+        markareas={}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+
+\task Старинная задача. Найдите мат в три хода за белых.
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        mover=w,
+        setpieces = {Kc1, Nb4, Nd4, Pe2},
+        addpieces = {ka1, bb1, bh6, pc4, pc3, pc2, pe3},
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields={},
+        markareas={}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\task Найдите выигрыш за белых.
+\begin{nscenter}
+    \begin{figure}[h]
+        \centering
+        \caption*{Керес — Файн\\Матч СССР — США, 1946 г.}
+        \chessboard[
+            showmover=true,
+            mover=w,
+            setpieces = {Kg1, Qh3, Rf1, Rd1, Bf4, Ng5, Pd5, Pf2, Pg2, Ph2},
+            addpieces={kg8, qb5, rc8, rf8, bg7, nf6, pc5, pf7, pg6, ph7},
+            pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+            text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+            markfields={},
+            markareas={}
+        ]
+    \end{figure}
+\end{nscenter}
+
+\task Найдите выигрыш за черных.
+\begin{nscenter}
+    \begin{figure}[h]
+        \centering
+        \caption*{Левенфиш — Чеховер\\Москва, 1935 г.}
+        \chessboard[
+            showmover=true,
+            mover=b,
+            setpieces = {Kh2, Qd4, Rg1, Bb2, Pa2, Pb4, Pc4, Pd6, Pf2, Ph4},
+            addpieces={kg8, qh6, rf7, ng7, pa7, pb6, pd7, pe6, ph7},
+            pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+            text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+            markfields={},
+            markareas={}
+        ]
+    \end{figure}
+\end{nscenter}
+
+\taskk Попробуйте оценить позицию и найти за черных выигрышную стратегию.
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        mover=b,
+        setpieces = {Kb3, Be3, Pd4, Pf4, Pg5},
+        addpieces={kb5, nc6, pd5, pf5, pg6},
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields={},
+        markareas={}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\taskk Данная позиция немного отличается от позиции из предыдущей задачи.
+Есть ли здесь у черных стратегия для победы?
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        mover=b,
+        setpieces = {Kc3, Bf3, Pd4, Pf4, Pg5},
+        addpieces={kb5, ne7, pd5, pf5, pg6},
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields={},
+        markareas={}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\taskk Попробуйте оценить позицию и подумать над выигрышной стратегией для черных.
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        mover=b,
+        setpieces = {Ke2, Nd5, Pa4},
+        addpieces={ka5, bg1, pa6, pe4},
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields={},
+        markareas={}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\end{document}
