@@ -45,72 +45,92 @@
 
 \newcommand{\task}[0]{\par\noindent\textbf{Задача\,\arabic{taskno}.} \stepcounter{taskno} \stepcounter{subtaskno}}
 \newcommand{\taskk}[0]{\par\noindent\textbf{Задача\,\arabic{taskno}*.} \stepcounter{taskno} \stepcounter{subtaskno}}
+\newcommand{\taskkk}[0]{\par\noindent\textbf{Задача\,\arabic{taskno}**.} \stepcounter{taskno} \stepcounter{subtaskno}}
 
 
 \begin{document}
 
-% \setchessboard{
-%     inverse=false,
-%     normalboard,
-%     color=magenta,
-%     clearboard,
-%     showmover=true}
-
-\task Какое минимальное количество ходов необходимо для белых, чтобы поставить мат?
-
+\task Найдите выигрышный ход за белых. Ход белых.
 \begin{nscenter}
     \chessboard[
         showmover=true,
-        setpieces = {Kg1, Ba1, Nf6, Ph6},
-        addpieces={kh8, bb7, pg3},
-        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
-        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
-        markfields={},
-        markareas={}
-    ]
-\end{nscenter}
-
-\taskk Подумайте, могут ли черные из предыдущей задачи каким-то образом отсрочить мат?
-
-\taskk Если справились с предыдущей задачей, подумайте еще вот над чем:
-могут ли белые из предыдущей задачи, несмотря на оттягивание мата со стороны черных,
-все же немного его ускорить?
-
-\taskk Ситуация кажется для белых безысходной:
-у черных преимущество в ладью и пешки вот-вот пройдут в ферзи.
-Могут ли белые как-то спасти свое положение?
-
-\begin{nscenter}
-    \chessboard[
-        showmover=true,
-        setpieces = {Kd6, Qb6, Bc7, Pb4, Pc5},
-        addpieces={ka8, qb1, rc8, bb5, pa6, pc6, pd3, pe2},
-        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
-        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
-        markfields={},
-        markareas={}
+        % mover=b,
+        borderleft=true,
+        bordertop=true,
+        borderbottom=true,
+        labeltoplift=0.4em,
+        labeltop=false,
+        labelbottom=true,
+        labelleft=true,
+        labelright=false,
+        % printarea=a1-h5,
+        %markfields=\fields,
+        %markareas=\areas,
+        setpieces={Kg1, Qd1, Re1, Ba5, Bh3, Nc3, Nc4, Pb3, Pc2, Pe4, Pf2, Pg3, Ph2},
+        addpieces={ke8, qc6, rh8, bb7, bf8, nc5, nf6, pa6, pd6, pe5, pf7, pg6, ph7}
     ]
 \end{nscenter}
 \vspace{4pt}
 
-\newpage
-
-\taskk Найдите мат в два хода за белых.
-
+\task Каким образом белым поймать черного коня? Ход белых.
 \begin{nscenter}
     \chessboard[
         showmover=true,
-        setpieces = {Kg7, Qf7, Rb5, Re1},
-        addpieces={ka8, rf5, bg6, nd6, pb7, pd5, pf4, pf6},
-        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
-        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
-        markfields={},
-        markareas={}
+        % mover=b,
+        borderleft=true,
+        bordertop=true,
+        borderbottom=true,
+        labeltoplift=0.4em,
+        labeltop=false,
+        labelbottom=true,
+        labelleft=true,
+        labelright=false,
+        % printarea=a1-h5,
+        %markfields=\fields,
+        %markareas=\areas,
+        setpieces={Kf4, Bb3, Pa3, Pb2, Pc2, Pd3, Ph3},
+        addpieces={ke7, nh2, pa7, pb5, pf5, pg6, ph7}
     ]
 \end{nscenter}
 \vspace{4pt}
 
-\task Каким образом белым выиграть?
+\task Подумайте над выигрышной стратегией за белых при их ходе.
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        borderleft=true,
+        bordertop=true,
+        borderbottom=true,
+        labeltoplift=0.4em,
+        labeltop=false,
+        labelbottom=true,
+        labelleft=true,
+        labelright=false,
+        setpieces={Kd5, Rh6, Pe4, Pf3},
+        addpieces={kd7, bc5, pd6, pe5, pf4}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\task Подумайте над выигрышной стратегией за белых при их ходе.
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        borderleft=true,
+        bordertop=true,
+        borderbottom=true,
+        labeltoplift=0.4em,
+        labeltop=false,
+        labelbottom=true,
+        labelleft=true,
+        labelright=false,
+        setpieces={Kf5, Bd5, Pg2},
+        addpieces={kh4, bg8, pf7}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\task Каким образом белым выиграть? Ход белых.
 \begin{nscenter}
     \chessboard[
         showmover=true,
@@ -131,7 +151,7 @@
 \end{nscenter}
 \vspace{4pt}
 
-\task Могут ли белые выиграть?
+\task Могут ли белые выиграть? Ход белых.
 \begin{nscenter}
     \chessboard[
         showmover=true,
@@ -152,7 +172,7 @@
 \end{nscenter}
 \vspace{4pt}
 
-\task Могут ли белые выиграть?
+\task Могут ли белые выиграть? Ход белых.
 \begin{nscenter}
     \chessboard[
         showmover=true,
@@ -174,7 +194,7 @@
 \vspace{4pt}
 
 
-\task Могут ли черные выиграть?
+\task Могут ли черные выиграть? Ход черных.
 \begin{nscenter}
     \chessboard[
         showmover=true,
@@ -285,50 +305,6 @@
 \end{nscenter}
 \vspace{4pt}
 
-\task Найти выигрышный ход за белых.
-\begin{nscenter}
-    \chessboard[
-        showmover=true,
-        % mover=b,
-        borderleft=true,
-        bordertop=true,
-        borderbottom=true,
-        labeltoplift=0.4em,
-        labeltop=false,
-        labelbottom=true,
-        labelleft=true,
-        labelright=false,
-        % printarea=a1-h5,
-        %markfields=\fields,
-        %markareas=\areas,
-        setpieces={Kg1, Qd1, Re1, Ba5, Bh3, Nc3, Nc4, Pb3, Pc2, Pe4, Pf2, Pg3, Ph2},
-        addpieces={ke8, qc6, rh8, bb7, bf8, nc5, nf6, pa6, pd6, pe5, pf7, pg6, ph7}
-    ]
-\end{nscenter}
-\vspace{4pt}
-
-\task Каким образом белым поймать черного коня?
-\begin{nscenter}
-    \chessboard[
-        showmover=true,
-        % mover=b,
-        borderleft=true,
-        bordertop=true,
-        borderbottom=true,
-        labeltoplift=0.4em,
-        labeltop=false,
-        labelbottom=true,
-        labelleft=true,
-        labelright=false,
-        % printarea=a1-h5,
-        %markfields=\fields,
-        %markareas=\areas,
-        setpieces={Kf4, Bb3, Pa3, Pb2, Pc2, Pd3, Ph3},
-        addpieces={ke7, nh2, pa7, pb5, pf5, pg6, ph7}
-    ]
-\end{nscenter}
-\vspace{4pt}
-
 \task Найдите мат в 3 хода за белых.
 \begin{nscenter}
     \chessboard[
@@ -372,5 +348,71 @@
     ]
 \end{nscenter}
 \vspace{4pt}
+
+% \setchessboard{
+%     inverse=false,
+%     normalboard,
+%     color=magenta,
+%     clearboard,
+%     showmover=true}
+
+
+\newpage
+
+\task Какое минимальное количество ходов необходимо белым, чтобы поставить мат? Ход белых.
+
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        setpieces = {Kg1, Ba1, Nf6, Ph6},
+        addpieces={kh8, bb7, pg3},
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields={},
+        markareas={}
+    ]
+\end{nscenter}
+
+\taskk Подумайте, могут ли черные из предыдущей задачи каким-то образом отсрочить мат?
+
+\taskkk Если справились с предыдущей задачей, подумайте еще вот над чем:
+могут ли белые из предыдущей задачи, несмотря на оттягивание мата со стороны черных,
+все же немного его ускорить?
+
+\taskkk Ситуация кажется для белых безысходной:
+у черных преимущество в ладью и пешки вот-вот пройдут в ферзи.
+Могут ли белые как-то спасти свое положение? Ход белых.
+
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        setpieces = {Kd6, Qb6, Bc7, Pb4, Pc5},
+        addpieces={ka8, qb1, rc8, bb5, pa6, pc6, pd3, pe2},
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields={},
+        markareas={}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+\newpage
+
+\taskkk Найдите мат в два хода за белых.
+
+\begin{nscenter}
+    \chessboard[
+        showmover=true,
+        setpieces = {Kg7, Qf7, Rb5, Re1},
+        addpieces={ka8, rf5, bg6, nd6, pb7, pd5, pf4, pf6},
+        pgfstyle= {[base,at={\pgfpoint{0pt}{-0.4ex}}]text},
+        text= \fontsize{1.7ex}{1.2ex}\bfseries \sffamily\currentwq,
+        markfields={},
+        markareas={}
+    ]
+\end{nscenter}
+\vspace{4pt}
+
+
 
 \end{document}
