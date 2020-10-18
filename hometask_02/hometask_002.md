@@ -59,6 +59,7 @@ class: "my-class1 my-class2"
 **Задача 10.** Найти мат в два хода за белых.
 ![ex_10](/hometask_02/images/ex_10.png)
 
+<!--
 **Задача 11.** Найдите лучший ход за белых.
 ![ex_10](/hometask_02/images/ex_11.png)
 
@@ -75,4 +76,4 @@ class: "my-class1 my-class2"
 ![ex_10](/hometask_02/images/ex_15.png)
 
 **Задача 16.** Найдите лучший ход за белых.
-![ex_10](/hometask_02/images/ex_16.png)
+![ex_10](/hometask_02/images/ex_16.png) -->
